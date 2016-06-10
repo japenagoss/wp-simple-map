@@ -32,3 +32,9 @@ include(DIR_WP_SIMPLE_MAP."/requires/capabilities.php");
  */
 include(DIR_WP_SIMPLE_MAP."/requires/posttypes.php");
 
+/**
+ * Shortcodes
+ * ------------------------------------------------------------------------
+ */
+include(DIR_WP_SIMPLE_MAP."/requires/shortcodes.php");
+
