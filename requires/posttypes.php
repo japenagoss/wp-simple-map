@@ -2,10 +2,11 @@
 /**
  * File for create custom post type declaration for maps points. 
  * Else for create metaboxes and save their data
+ * ------------------------------------------------------------------------------
  */ 
-add_action('init', 'create_wp_simple_map_post_type');
+add_action('init', 'wpsm_create_post_type');
 
-function create_wp_simple_map_post_type(){
+function wpsm_create_post_type(){
     $labels = array(
         'name'               => __( 'Locations', 'wp_simple_map' ),
         'singular_name'      => __( 'Location', 'wp_simple_map' ),
@@ -49,4 +50,79 @@ function create_wp_simple_map_post_type(){
     );
 
     register_post_type( 'map_locations', $args );
+}
+
+/**
+ * Register meta box(es).
+ * -----------------------------------------------------------------------------
+ */
+function wpsm_register_meta_boxes() {
+    add_meta_box(
+        'settings-metabox-wp-simple-map', 
+        __( 'Settings', 'wp_simple_map' ), 
+        'wpsm_create_metabox', '
+        map_locations' 
+    );
+}
+
+/**
+ * Generate meta box(es).
+ */
+function wpsm_create_metabox($post) {
+    $latitude   = get_post_meta($post->ID,'wpsm_latitude', true);
+    $longitude  = get_post_meta($post->ID,'wpsm_longitude', true);
+
+    // Add an nonce field so we can check for it later.
+    wp_nonce_field('wpsm_inner_custom_box', 'wpsm_inner_custom_box_nonce');
+
+    include(DIR_WP_SIMPLE_MAP."/requires/pages/metabox.php");
+}
+
+/**
+ * Save meta box(es) data
+ */
+function wpms_save_location($post_id){
+    if(!isset($_POST['wpsm_inner_custom_box_nonce'])){
+        return $post_id;
+    }
+
+    $nonce = $_POST['wpsm_inner_custom_box_nonce'];
+
+    if(!wp_verify_nonce($nonce, 'wpsm_inner_custom_box')){
+        return $post_id;
+    }
+
+    if(defined('DOING_AUTOSAVE') && DOING_AUTOSAVE){
+        return $post_id;
+    }
+
+    if('map_locations' == $_POST['post_type'] ) {
+        if(!current_user_can('edit_location', $post_id)){
+            return $post_id;
+        }
+    }
+    else{
+        if(!current_user_can('edit_location', $post_id)){
+            return $post_id;
+        }
+    }
+
+    $latitude   = sanitize_text_field($_POST['wpsm_latitude']);
+    $longitude  = sanitize_text_field($_POST['wpsm_longitude']);
+
+    update_post_meta($post_id,'wpsm_latitude', $latitude);
+    update_post_meta($post_id,'wpsm_longitude', $longitude);
+}
+
+/**
+ * Load metaboxes
+ */
+function wpsm_load_metaboxes(){
+    add_action('add_meta_boxes', 'wpsm_register_meta_boxes');  
+    add_action( 'save_post', 'wpms_save_location');
+}
+
+if(is_admin()){
+    add_action('load-post.php',     'wpsm_load_metaboxes');
+    add_action('load-post-new.php', 'wpsm_load_metaboxes');
 }

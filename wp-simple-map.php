@@ -21,8 +21,8 @@ define(DIR_WP_SIMPLE_MAP,plugin_dir_path(__FILE__));
  * Hooks and functions when the plugins is activate and deactivate
  * ------------------------------------------------------------------------
  */
-register_activation_hook(__FILE__,"wp_simple_map_activation");
-register_deactivation_hook(__FILE__,"wp_simple_map_deactivation");
+register_activation_hook(__FILE__,"wpsm_activation");
+register_deactivation_hook(__FILE__,"wpsm_deactivation");
 
 include(DIR_WP_SIMPLE_MAP."/requires/capabilities.php");
 

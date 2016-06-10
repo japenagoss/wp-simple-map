@@ -1,5 +1,5 @@
 <?php
-function wp_simple_map_activation(){
+function wpsm_activation(){
     $role = get_role("administrator");
     
     $role->add_cap("edit_location");
@@ -12,7 +12,7 @@ function wp_simple_map_activation(){
     $role->add_cap("create_locations");
 }
 
-function wp_simple_map_deactivation(){
+function wpsm__deactivation(){
     $role = get_role("administrator");
     
     $role->remove_cap("edit_location");

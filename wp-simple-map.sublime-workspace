@@ -91,22 +91,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "wp-simple-map.php",
-			"settings":
-			{
-				"buffer_size": 552,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "requires/posttypes.php",
-			"settings":
-			{
-				"buffer_size": 1830,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -145,13 +129,16 @@
 	},
 	"expanded_folders":
 	[
-		"/var/www/html/wordpress/wp-content/plugins/wp-simple-map",
-		"/var/www/html/wordpress/wp-content/plugins/wp-simple-map/requires"
+		"/var/www/html/wordpress/wp-content/plugins/wp-simple-map"
 	],
 	"file_history":
 	[
-		"/var/www/html/wordpress/wp-content/plugins/wp-simple-map/requires/constants.php",
+		"/home/jhony/.ssh/id_rsa.pub",
+		"/var/www/html/wordpress/wp-content/plugins/wp-simple-map/wp-simple-map.php",
+		"/var/www/html/wordpress/wp-content/plugins/wp-simple-map/requires/capabilities.php",
+		"/var/www/html/wordpress/wp-content/plugins/wp-simple-map/requires/posttypes.php",
 		"/var/www/html/wordpress/wp-content/plugins/wp-simple-map/constants.php",
+		"/var/www/html/wordpress/wp-content/plugins/wp-simple-map/requires/constants.php",
 		"/var/www/html/wordpress/wp-content/plugins/akismet/akismet.php",
 		"/var/www/html/wordpress/wp-content/plugins/wp-easy-map/wp-easy-map.sublime-project",
 		"/var/www/html/landing-page/index.html",
@@ -197,66 +184,8 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "wp-simple-map.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 552,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								381,
-								381
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "requires/posttypes.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1830,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1584,
-								1584
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 168.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -303,7 +232,7 @@
 	"project": "wp-simple-map.sublime-project",
 	"replace":
 	{
-		"height": 64.0
+		"height": 46.0
 	},
 	"save_all_on_build": true,
 	"select_file":
