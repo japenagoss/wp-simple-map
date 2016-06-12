@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"pla",
+				"places_map"
+			],
+			[
 				"margin",
 				"margin"
 			],
@@ -136,8 +140,12 @@
 	"file_history":
 	[
 		"/var/www/html/wordpress/wp-content/plugins/wp-simple-map/wp-simple-map.php",
-		"/var/www/html/wordpress/wp-content/plugins/wp-simple-map/requires/posttypes.php",
+		"/var/www/html/wordpress/wp-content/plugins/wp-simple-map/requires/shortcodes.php",
+		"/var/www/html/wordpress/wp-content/plugins/wp-simple-map/requires/pages/front.php",
+		"/var/www/html/wordpress/wp-content/plugins/wp-simple-map/js/custom.js",
 		"/var/www/html/wordpress/wp-content/plugins/wp-simple-map/requires/pages/metabox.php",
+		"/var/www/html/wordpress/wp-content/plugins/wp-simple-map/style.css",
+		"/var/www/html/wordpress/wp-content/plugins/wp-simple-map/requires/posttypes.php",
 		"/var/www/html/wordpress/wp-content/plugins/wp-simple-map/requires/capabilities.php",
 		"/home/jhony/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
 		"/home/jhony/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
@@ -251,9 +259,13 @@
 	"select_project":
 	{
 		"height": 500.0,
-		"last_filter": "",
+		"last_filter": "ladn",
 		"selected_items":
 		[
+			[
+				"ladn",
+				"/var/www/html/landing-page/landing.sublime-project"
+			]
 		],
 		"width": 380.0
 	},

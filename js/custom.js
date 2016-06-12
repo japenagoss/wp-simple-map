@@ -1,9 +1,6 @@
 jQuery(document).ready(function($){
+    var infowindow;
 
-    //console.log(places);
-
-    
-  
     (function(){
 
         var myLatlng = new google.maps.LatLng(3.4105844,-76.7232089);
@@ -17,12 +14,23 @@ jQuery(document).ready(function($){
         if(places.length > 0){
             $(places).each(function(index, el){
 
-                console.log(parseFloat(el.latitude)+" / "+parseFloat(el.longitude));
-
                 var marker = new google.maps.Marker({
                     position: {lat: parseFloat(el.latitude), lng: parseFloat(el.longitude)},
                     map: map,
                     title: el.title
+                });
+
+                marker.addListener('click', function(){
+                    if(infowindow){
+                        infowindow.close();
+                    }
+
+                    infowindow = new google.maps.InfoWindow({
+                        content: el.content
+                    });
+
+                    infowindow.open(map, marker);
+                    
                 });
 
                 marker.setMap(map);
