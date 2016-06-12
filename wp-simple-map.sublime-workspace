@@ -129,14 +129,19 @@
 	},
 	"expanded_folders":
 	[
-		"/var/www/html/wordpress/wp-content/plugins/wp-simple-map"
+		"/var/www/html/wordpress/wp-content/plugins/wp-simple-map",
+		"/var/www/html/wordpress/wp-content/plugins/wp-simple-map/requires",
+		"/var/www/html/wordpress/wp-content/plugins/wp-simple-map/requires/pages"
 	],
 	"file_history":
 	[
-		"/home/jhony/.ssh/id_rsa.pub",
 		"/var/www/html/wordpress/wp-content/plugins/wp-simple-map/wp-simple-map.php",
-		"/var/www/html/wordpress/wp-content/plugins/wp-simple-map/requires/capabilities.php",
 		"/var/www/html/wordpress/wp-content/plugins/wp-simple-map/requires/posttypes.php",
+		"/var/www/html/wordpress/wp-content/plugins/wp-simple-map/requires/pages/metabox.php",
+		"/var/www/html/wordpress/wp-content/plugins/wp-simple-map/requires/capabilities.php",
+		"/home/jhony/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
+		"/home/jhony/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/home/jhony/.ssh/id_rsa.pub",
 		"/var/www/html/wordpress/wp-content/plugins/wp-simple-map/constants.php",
 		"/var/www/html/wordpress/wp-content/plugins/wp-simple-map/requires/constants.php",
 		"/var/www/html/wordpress/wp-content/plugins/akismet/akismet.php",
@@ -145,8 +150,7 @@
 		"/var/www/html/landing-page/send-message.php",
 		"/var/www/html/landing-page/js/custom.js",
 		"/var/www/html/landing-page/css/style.css",
-		"/var/log/apache2/error.log",
-		"/home/jhony/.config/sublime-text-3/Packages/User/Preferences.sublime-settings"
+		"/var/log/apache2/error.log"
 	],
 	"find":
 	{
